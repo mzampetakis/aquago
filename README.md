@@ -87,12 +87,13 @@ This transformation is presented in the following image:
 
 ![alt text](doc/imgtransform.png "Image Transformation")
 
-Also at runtime application polls the Google's Drive folders for newly added images and if a new image is found, it is downloaded, transformed and then it just pops in the aquarium! That's quite convenient!
+Also, at runtime, application polls the Google's Drive folders for newly added images and if a new image is found, it is downloaded, transformed and then it just pops in the aquarium! That's quite convenient!
 
 ## Future Work
 * Run without the need of Google Drive usage. Work with local images placed in the corresponding folders.
 * Resize images with a more convenient way. Currently the resize is proportionally to original pixel/size. Make the resize proportion to screen size and object's real size (if possible 😁).
 * Improve the background removal algorithm (need better efficiency with decent performance)
+* Add some background noise.
 
 # Enjoy
 I hope you enjoy this app at least as I did while developing it and while I am watching this just working...
