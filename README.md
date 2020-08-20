@@ -1,12 +1,11 @@
 # aquago
-A Digital Aquarium written in go
+A Digital Aquarium written in go - Tpy project
 
 Which is something like this (depend on your fishes and decorative elements!):
 
 ![alt text](doc/aquago.png "aquago")
 
 ## Aquarium Content
-
 Our digital aquarium is consisted of four separate entities:
 
 * The background - a static image which is the seabed
@@ -17,13 +16,11 @@ Our digital aquarium is consisted of four separate entities:
 In order to run this application read the following steps.
 
 ## Prerequisites
-
 * a supported Go version with modules enabled
 * a Google Drive account
 * an installed C compiler (for [ebiten](https://ebiten.org/documents/install.html))
 
 ## Clone this repo
-
 Clone this repo by running
 
 ```console
@@ -61,11 +58,9 @@ GDRIVE_CREDS_FILE=credentials.json
 ```
 
 ### Google Drive oAuth
-
 In order to setup the Google's Drive API oAuth please read the documentation provided in the [corresponding repo](https://github.com/mzampetakis/gogle-drive).
 
 ## Running the app
-
 When configuration is ready you can run the app by executing:
 
 ```console
@@ -74,8 +69,7 @@ go run main.go
 
 After proceeding with the Google's Drive oAuth steps as [presented here](https://github.com/mzampetakis/gogle-drive) the application will start to download and transform the assets. After a while (depending on your assets) you will see something like the following.
 
-## Result
-
+## Results
 If no items are found within your Google Drive you will see something like this:
 
 ![alt text](doc/bubbles.gif "Empty Aquarium")
@@ -83,3 +77,21 @@ If no items are found within your Google Drive you will see something like this:
 If you have added assets in your Google Drive you will see something like this (Depending on your assets): 
 
 ![alt text](doc/aquago.gif "Full Aquarium")
+
+
+## Gift 🎁
+All images used in this project have their background removed!!
+This was not done by hand of course. Each image used in this app (either as BG or FG) after being retrieved from Google Drive is transformed! This transformation removes image's background (if possible - using a sample from the top left portion of the image and a threshold), crop's it to leave only the effective image and resizes to a valid size.
+
+This transformation is presented in the following image:
+
+![alt text](doc/imgtransform.png "Image Transformation")
+
+
+## Future Work
+* Run without the need of Google Drive usage. Work with local images placed in the corresponding folders.
+* Resize images with a more convenient way. Currently the resize is proportionally to original pixel/size. Make the resize proportion to screen size and object's real size (if possible 😁).
+* Improve the background removal algorithm (need better efficiency with decent performance)
+
+# Enjoy
+I hope you enjoy this app at least as I did while developing it and while I am watching this just working...
