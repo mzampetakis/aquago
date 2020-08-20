@@ -87,6 +87,7 @@ This transformation is presented in the following image:
 
 ![alt text](doc/imgtransform.png "Image Transformation")
 
+Also at runtime application polls the Google's Drive folders for newly added images and if a new image is found, it is downloaded, transformed and then it just pops in the aquarium! That's quite convenient!
 
 ## Future Work
 * Run without the need of Google Drive usage. Work with local images placed in the corresponding folders.
