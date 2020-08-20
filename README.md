@@ -1,5 +1,5 @@
 # aquago
-A Digital Aquarium written in go - Tpy project
+A Digital Aquarium written in go - A toy project
 
 Which is something like this (depend on your fishes and decorative elements!):
 
@@ -29,7 +29,7 @@ git clone https://github.com/mzampetakis/aquago.git
 
 ## Configuration
 
-### Env Vars
+### Env Vars 📄
 Before running the app all configuration must be set. The configuration can be added an Env Vars or inside the provided `.env` file. The variables are:
 
 ```
@@ -57,10 +57,10 @@ CLEARASSETS=true
 GDRIVE_CREDS_FILE=credentials.json
 ```
 
-### Google Drive oAuth
+### Google Drive oAuth 🗂
 In order to setup the Google's Drive API oAuth please read the documentation provided in the [corresponding repo](https://github.com/mzampetakis/gogle-drive).
 
-## Running the app
+## Running the app 🏃‍♂️
 When configuration is ready you can run the app by executing:
 
 ```console
@@ -69,7 +69,7 @@ go run main.go
 
 After proceeding with the Google's Drive oAuth steps as [presented here](https://github.com/mzampetakis/gogle-drive) the application will start to download and transform the assets. After a while (depending on your assets) you will see something like the following.
 
-## Results
+## Results 🐠
 If no items are found within your Google Drive you will see something like this:
 
 ![alt text](doc/bubbles.gif "Empty Aquarium")
@@ -79,7 +79,7 @@ If you have added assets in your Google Drive you will see something like this (
 ![alt text](doc/aquago.gif "Full Aquarium")
 
 
-## Gift 🎁
+## Gifts 🎁
 All images used in this project have their background removed!!
 This was not done by hand of course. Each image used in this app (either as BG or FG) after being retrieved from Google Drive is transformed! This transformation removes image's background (if possible - using a sample from the top left portion of the image and a threshold), crop's it to leave only the effective image and resizes to a valid size.
 
@@ -89,7 +89,7 @@ This transformation is presented in the following image:
 
 Also, at runtime, application polls the Google's Drive folders for newly added images and if a new image is found, it is downloaded, transformed and then it just pops in the aquarium! That's quite convenient!
 
-## Future Work
+## Future Work 🐡
 * Run without the need of Google Drive usage. Work with local images placed in the corresponding folders.
 * Resize images with a more convenient way. Currently the resize is proportionally to original pixel/size. Make the resize proportion to screen size and object's real size (if possible 😁).
 * Improve the background removal algorithm (need better efficiency with decent performance)
