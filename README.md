@@ -97,3 +97,5 @@ Also, at runtime, application polls the Google's Drive folders for newly added i
 
 # Enjoy
 I hope you enjoy this app at least as I did while developing it and while I am watching this just working...
+
+### Contributions are more than welcome in form of PRs or issues!
