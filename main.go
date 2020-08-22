@@ -40,7 +40,7 @@ func loadEnvVars() {
 }
 
 func main() {
-	fmt.Println("Welcome to Aquarium.")
+	fmt.Println("Welcome to AquaGo!")
 	bgImage := os.Getenv("BGIMAGE")
 
 	gdriveCredsFile := os.Getenv("GDRIVE_CREDS_FILE")
@@ -55,18 +55,15 @@ func main() {
 		foldersToEmpty := []string{bgFolder, fgFolder, gdriveBgFolder, gdriveFgFolder}
 		for _, folderToEmpty := range foldersToEmpty {
 			removeFilesFrom(folderToEmpty)
-			fmt.Println("• " + folderToEmpty + " ✓")
 		}
 	}
 
-	fmt.Println("Downloading assets...")
+	fmt.Println("Initiating assets download...")
+	fmt.Println("Your assets will appear in a while...")
 	gogledrive, err := gogledrive.New(gdriveCredsFile)
 	if err != nil {
 		log.Fatalf("Could not instantiate google drive %s", err)
 	}
-	downloadNewImages(gogledrive, os.Getenv("BGFOLDERID"), gdriveBgFolder, bgFolder)
-	downloadNewImages(gogledrive, os.Getenv("FGFOLDERID"), gdriveFgFolder, fgFolder)
-
 	ticker := time.NewTicker(1 * time.Minute)
 	go func() {
 		for range ticker.C {
@@ -75,7 +72,7 @@ func main() {
 		}
 	}()
 
-	fmt.Println("Starting Aquarium...")
+	fmt.Println("Starting Aquarium. Enjoy!")
 	aquarium.Start(bgImage, bgFolder, fgFolder)
 }
 

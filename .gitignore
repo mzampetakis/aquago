@@ -15,10 +15,11 @@
 vendor/
 
 # Assets folders
-assets/bg/
-assets/fg/
-asstes/gdrive/bg/
-asstes/gdrive/fg/
+!.gitkeep
+assets/bg/*
+assets/fg/*
+asstes/gdrive/bg/*
+asstes/gdrive/fg/*
 
 # GDrive creds
 credentials.json

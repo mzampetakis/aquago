@@ -58,6 +58,7 @@ type Fish struct {
 	skew          float64
 	skewDirection int
 }
+
 type Game struct {
 	strokes map[*Stroke]struct{}
 	sprites []*Sprite
@@ -107,8 +108,6 @@ func NewGame() *Game {
 		strokes: map[*Stroke]struct{}{},
 		sprites: sprites,
 	}
-	newGame.checkForNewSprites(bgImagesFolderPath)
-	newGame.checkForNewFishes(fgImagesFolderPath)
 	ticker := time.NewTicker(1 * time.Minute)
 	go func() {
 		for range ticker.C {
@@ -344,6 +343,7 @@ func Start(bgImageFile string, bgImagesFolder string, fgImagesFolder string) {
 	bgImageFilePath = bgImageFile
 	bgImagesFolderPath = bgImagesFolder
 	fgImagesFolderPath = fgImagesFolder
+	ebiten.SetMaxTPS(60)
 	initGame()
 	ebiten.SetFullscreen(true)
 	screenWidth, screenHeight = ebiten.ScreenSizeInFullscreen()

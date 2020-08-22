@@ -74,7 +74,7 @@ If no items are found within your Google Drive you will see something like this:
 
 ![alt text](doc/bubbles.gif "Empty Aquarium")
 
-If you have added assets in your Google Drive you will see something like this (Depending on your assets): 
+If you have added assets in your Google Drive you will see something like this after all of them have downloaded (depending on your assets): 
 
 ![alt text](doc/aquago.gif "Full Aquarium")
 
@@ -91,11 +91,10 @@ Also, at runtime, application polls the Google's Drive folders for newly added i
 
 ## Future Work 🐡
 * Run without the need of Google Drive usage. Work with local images placed in the corresponding folders.
-* Resize images with a more convenient way. Currently the resize is proportionally to original pixel/size. Make the resize proportion to screen size and object's real size (if possible 😁).
 * Improve the background removal algorithm (need better efficiency with decent performance)
-* Add some background noise.
+* Add some background sound - as a real aquarium.
 
 # Enjoy
 I hope you enjoy this app at least as I did while developing it and while I am watching this just working...
 
-### Contributions are more than welcome in form of PRs or issues!
+### Contributions are more than welcome in form of PRs or issues! But most importantly I would like to know if you enjoyed this!

@@ -78,8 +78,10 @@ func RemoveBG(imageName string, savePath string) string {
 	img = transform.Crop(img, image.Rect(minTransX, minTransY, maxTransX, maxTransY))
 
 	bounds = img.Bounds()
-	w, h = bounds.Max.X, bounds.Max.Y
-	img = transform.Resize(img, w/20, h/20, transform.Gaussian)
+	croppedW, croppedH := bounds.Max.X, bounds.Max.Y
+	resizeW := int(float64(croppedW) / float64(w) * 200)
+	resizeH := int(float64(croppedH) / float64(h) * 200)
+	img = transform.Resize(img, resizeW, resizeH, transform.Gaussian)
 
 	imgFinalName := uuid.New().String()
 	if err := imgio.Save(savePath+imgFinalName+".png", img, imgio.PNGEncoder()); err != nil {
