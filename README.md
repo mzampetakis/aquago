@@ -3,7 +3,7 @@ A Digital Aquarium written in go - A toy project
 
 Which is something like this (depend on your fishes and decorative elements!):
 
-![alt text](doc/aquago.png "aquago")
+![aquago](doc/aquago.png)
 
 ## Aquarium Content
 Our digital aquarium is consisted of four separate entities:
@@ -72,11 +72,11 @@ After proceeding with the Google's Drive oAuth steps as [presented here](https:/
 ## Results 🐠
 If no items are found within your Google Drive you will see something like this:
 
-![alt text](doc/bubbles.gif "Empty Aquarium")
+![Empty Aquarium](doc/bubbles.gif)
 
 If you have added assets in your Google Drive you will see something like this after all of them have downloaded (depending on your assets): 
 
-![alt text](doc/aquago.gif "Full Aquarium")
+![Full Aquarium](doc/aquago.gif)
 
 
 ## Gifts 🎁
@@ -85,7 +85,7 @@ This was not done by hand of course. Each image used in this app (either as BG o
 
 This transformation is presented in the following image:
 
-![alt text](doc/imgtransform.png "Image Transformation")
+![Image Transformation](doc/imgtransform.png)
 
 Also, at runtime, application polls the Google's Drive folders for newly added images and if a new image is found, it is downloaded, transformed and then it just pops in the aquarium! That's quite convenient!
 
