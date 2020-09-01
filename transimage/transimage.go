@@ -9,6 +9,7 @@ import (
 	"os"
 
 	"github.com/anthonynsimon/bild/blur"
+	"github.com/anthonynsimon/bild/effect"
 	"github.com/anthonynsimon/bild/imgio"
 	"github.com/anthonynsimon/bild/paint"
 	"github.com/anthonynsimon/bild/transform"
@@ -31,6 +32,9 @@ func RemoveBG(imageName string, savePath string) string {
 	w, h := bounds.Max.X, bounds.Max.Y
 	img = blur.Gaussian(img, 5.0)
 	img = paint.FloodFill(img, image.Point{0, 0}, color.RGBA{0, 0, 0, 0}, 150)
+
+	//Erode image to exclude noise
+	img = effect.Erode(img, 1)
 
 	// Crop the image
 	minTransX := -1
