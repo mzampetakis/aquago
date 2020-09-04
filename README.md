@@ -1,7 +1,7 @@
 # aquago
 A Digital Aquarium written in go - A toy project
 
-Which is something like this (depend on your fishes and decorative elements!):
+Which is something like this (depending on your fishes and decorative elements!):
 
 ![aquago](doc/aquago.png)
 
@@ -17,7 +17,7 @@ In order to run this application read the following steps.
 
 ## Prerequisites
 * a supported Go version with modules enabled
-* a Google Drive account
+* a Google Drive's account
 * an installed C compiler (for [ebiten](https://ebiten.org/documents/install.html))
 
 ## Clone this repo
@@ -30,7 +30,7 @@ git clone https://github.com/mzampetakis/aquago.git
 ## Configuration
 
 ### Env Vars 📄
-Before running the app all configuration must be set. The configuration can be added an Env Vars or inside the provided `.env` file. The variables are:
+Before running the app all configuration must be set. The configuration can be added an OS's Env Vars or inside the provided `.env` file. The necessary variables are:
 
 ```
 # GDrive Folders
@@ -67,10 +67,10 @@ When configuration is ready you can run the app by executing:
 go run main.go
 ```
 
-After proceeding with the Google's Drive oAuth steps as [presented here](https://github.com/mzampetakis/gogle-drive) the application will start to download and transform the assets. After a while (depending on your assets) you will see something like the following.
+After proceeding with the Google's Drive oAuth steps as [presented here](https://github.com/mzampetakis/gogle-drive) the application will start to download and transform the assets. While donwloading you will see an empty aquarium and your assets will gradually pop in.
 
 ## Results 🐠
-If no items are found within your Google Drive you will see something like this:
+If no items are found within your Google Drive (or while they are getting downloaded) you will see something like this:
 
 ![Empty Aquarium](doc/bubbles.gif)
 
@@ -87,14 +87,14 @@ This transformation is presented in the following image:
 
 ![Image Transformation](doc/imgtransform.png)
 
-Also, at runtime, application polls the Google's Drive folders for newly added images and if a new image is found, it is downloaded, transformed and then it just pops in the aquarium! That's quite convenient!
+Also, at runtime, application polls the Google's Drive folders for newly added images and if a new image is found, it is downloaded, transformed and then it just pops into the aquarium! That's quite convenient!
 
 ## Future Work 🐡
 * Run without the need of Google Drive usage. Work with local images placed in the corresponding folders.
-* Improve the background removal algorithm (need better efficiency with decent performance)
+* Improve the background removal algorithm (needs better efficiency with decent performance)
 * Add some background sound - as a real aquarium.
 
 # Enjoy
-I hope you enjoy this app at least as I did while developing it and while I am watching this just working...
+I hope you enjoy this app at least as I did while developing and using it...
 
 ### Contributions are more than welcome in form of PRs or issues! But most importantly I would like to know if you enjoyed this!
